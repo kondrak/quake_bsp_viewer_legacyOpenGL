@@ -15,7 +15,6 @@ StatsUI *g_q3stats = NULL;  // map stats UI
 Frustum  g_frustum;         // view frustum
 
 
-
 Application::Application() : m_running(true)
 {
     g_cameraDirector.AddCamera( Math::Vector3f(0.0f, 0.0f, 4.0f),
