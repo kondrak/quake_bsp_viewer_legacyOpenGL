@@ -46,7 +46,7 @@ Todo
 Here's a list of ideas that could be fun to implement over time:
 
 - add support for older bsp formats (ie. Quake1, Quake2)
-- render map entities (weapons, other pickups)
+- render map entities (weapons, armor, other pickups)
 - support loading data from pk3/pak files
 - add support for rendering Quake 3 shaders (if you're REALLY bored)
 - bsp patch tesselation on the fly - you give the level, we rework it!
