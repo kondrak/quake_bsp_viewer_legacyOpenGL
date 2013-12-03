@@ -9,10 +9,6 @@
 
 extern RenderContext g_renderContext;
 CameraDirector g_cameraDirector;
-/*gfx::PolygonSet triangles;
-gfx::PolygonSet quad;
-gfx::Shape shape;
-gfx::Shape shape2; */
 
 BspMap  *g_q3map   = NULL;  // loaded map
 StatsUI *g_q3stats = NULL;  //  map stats UI
@@ -56,43 +52,6 @@ void Application::OnStart(int argc, char **argv)
     glEnableClientState(GL_VERTEX_ARRAY);
     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 
-    /*triangles.AddVertex( Math::Vector3f(-1.f, 0.0f, 0.0f), Math::Vector3f(1.0f, 0.0f, 0.0f) );
-    triangles.AddVertex( Math::Vector3f(1.f, 0.0f, 0.0f), Math::Vector3f(0.0f, 1.0f, 0.0f) );
-    triangles.AddVertex( Math::Vector3f(0.f, 1.0f, 0.0f), Math::Vector3f(0.0f, 0.0f, 1.0f) );
-
-    triangles.AddVertex( Math::Vector3f(0.0f, 1.0f, 0.0f), Math::Vector3f(0.0f, 1.0f, 1.0f) );
-    triangles.AddVertex( Math::Vector3f(0.f, 0.0f, -1.0f), Math::Vector3f(1.0f, 1.0f, 0.0f) );
-    triangles.AddVertex( Math::Vector3f(1.f, 0.0f, 0.0f), Math::Vector3f(1.0f, 0.0f, 1.0f) );
-
-    triangles.AddVertex( Math::Vector3f(0.0f, 0.0f, -1.0f), Math::Vector3f(0.5f, 1.0f, 0.0f) );
-    triangles.AddVertex( Math::Vector3f(1.0f, 0.0f, 0.0f), Math::Vector3f(0.0f, 0.5f, 1.0f) );
-    triangles.AddVertex( Math::Vector3f(0.f, 2.0f, -1.0f), Math::Vector3f(1.0f, 0.5f, 0.5f) );
-
-
-    quad.AddVertex(Math::Vector3f(-1.0, -1.0, 1.0), Math::Vector3f(1.f, 1.f, 1.f), Math::Vector2f(0.0, 0.0) );
-    quad.AddVertex(Math::Vector3f(1.0, -1.0, 1.0), Math::Vector3f(1.f, 1.f, 1.f), Math::Vector2f(0.0, 1.0) );
-    quad.AddVertex(Math::Vector3f(1.0, 1.0, 1.0), Math::Vector3f(1.f, 1.f, 1.f),  Math::Vector2f(1.0, 1.0) );
-    quad.AddVertex(Math::Vector3f(-1.0, 1.0, 1.0), Math::Vector3f(1.f, 1.f, 1.f), Math::Vector2f(1.0, 0.0) );
-
-    quad.AddVertex(Math::Vector3f(-1.0, -1.0, 1.0), Math::Vector3f(0.f, 1.f, 1.f), Math::Vector2f(0.0, 0.0) );
-    quad.AddVertex(Math::Vector3f(1.0, -1.0, 1.0), Math::Vector3f(1.f, 0.f, 1.f), Math::Vector2f(0.0, 1.0) );
-    quad.AddVertex(Math::Vector3f(1.0, -1.0, -1.0), Math::Vector3f(1.f, 1.f, 0.f),  Math::Vector2f(1.0, 1.0) );
-    quad.AddVertex(Math::Vector3f(-1.0, -1.0, -1.0), Math::Vector3f(0.f, 1.f, 1.f), Math::Vector2f(1.0, 0.0) );
-
-    quad.AddVertex(Math::Vector3f(-1.0, -1.0, -1.0), Math::Vector3f(1.f, 1.f, 1.f), Math::Vector2f(0.0, 0.0) );
-    quad.AddVertex(Math::Vector3f(1.0, -1.0, -1.0), Math::Vector3f(1.f, 1.f, 1.f), Math::Vector2f(0.0, 1.0) );
-    quad.AddVertex(Math::Vector3f(1.0, 1.0, -1.0), Math::Vector3f(1.f, 1.f, 1.f),  Math::Vector2f(1.0, 1.0) );
-    quad.AddVertex(Math::Vector3f(-1.0, 1.0, -1.0), Math::Vector3f(1.f, 1.f, 1.f), Math::Vector2f(1.0, 0.0) );
-
-    quad.SetTexture("block_blue.png");
-
-    shape.AddPolygonSet( &quad );
-   // shape.AddPolygon( &quad2 );
-    shape.SetPosition(0.f, 0.0f, -5.0f);   
-
-    shape2.AddPolygonSet( &triangles );
-    shape2.SetPosition(0.f, 0.f, -1.f); */
-
     Q3BspLoader loader;
 
     // assume the first parameter is the map filename
@@ -124,14 +83,6 @@ void Application::OnRender()
 
     g_frustum.Update();
 
-   /* glPushMatrix();  
-        shape2.OnRender();   
-    glPopMatrix();
-
-     glPushMatrix();
-        shape.OnRender();
-    glPopMatrix();  */
-
     if(g_q3map)
     {
         g_q3map->OnRenderStart();
@@ -158,12 +109,6 @@ void Application::OnRender()
 void Application::OnUpdate(float dt)
 {    
     UpdateCamera( dt );
-
-    /*
-    angle += 50.f * dt;
-    shape.SetRotation(angle, 1, 1, 1);
-    shape2.SetRotation(angle, 0, 0, 1);
-    */
 }
 
 
