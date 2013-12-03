@@ -11,7 +11,7 @@ extern RenderContext g_renderContext;
 CameraDirector g_cameraDirector;
 
 BspMap  *g_q3map   = NULL;  // loaded map
-StatsUI *g_q3stats = NULL;  //  map stats UI
+StatsUI *g_q3stats = NULL;  // map stats UI
 Frustum  g_frustum;         // view frustum
 
 
