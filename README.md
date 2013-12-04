@@ -6,11 +6,11 @@ This is a rudimentary map viewer for Quake, written as a fun-time project over a
 
 Usage
 -----
-To properly run/debug the application, supply the bsp filename as a cmd line argument eg:
+To run/debug the application, supply the bsp filename as a cmd line argument:
 
-QuakeBspViewer.exe maps/ntkjidm2.bsp
+<code>QuakeBspViewer.exe maps/ntkjidm2.bsp</code>
 
-If the file is a valid bsp/not corrupted it will load up the map in a 1024x768 window. For a quick demo launch the 'run.bat' script.
+If the file is a valid bsp/not corrupted it will load up the map in a 1024x768 window. For a quick demo launch the <code>run.bat</code> script.
 
 Note that you must have Quake III Arena textures and models unpacked in the root directory if you want to see proper texturing on screen, otherwise you'll just see a bunch of lightmapped, colored checker-board textures filling the screen which is less impressive.
 
@@ -38,7 +38,7 @@ And yes, I know that Q3 sources are open now but I felt like taking up a challen
 
 Known issues
 -------
-The only noticeable you may run into is wrong handling of bsp leaves that contain doors, moving platforms etc. This is because they are handled differently by the original game. For this reason, you'll notice that doors may not render or appear suddenly when the camera reaches certain arbitrary position on the map (q3ctf1 is a good example, as is q3ctf2 where some leaves don't render at all). 
+The only noticeable you may run into is wrong handling of bsp leaves that contain doors, moving platforms etc. This is because they are handled differently by the original game. For this reason, you'll notice that doors may not render or appear suddenly when the camera reaches certain arbitrary position on the map (q3ctf1 is a good example where some leaves don't render at the right moment if PVS is enabled). 
 
 
 Todo
