@@ -86,14 +86,14 @@ void Q3BspBiquadPatch::Render(bool renderLightmaps)
     {
         for(int row=0; row < m_tesselationLevel; ++row)
         {
-            glDrawElements( GL_TRIANGLE_STRIP, 2*(m_tesselationLevel+1), GL_UNSIGNED_INT,
-                &m_indices[row*2*(m_tesselationLevel+1)]);
+            glDrawElements(GL_TRIANGLE_STRIP, 2 * (m_tesselationLevel + 1), GL_UNSIGNED_INT,
+                            &m_indices[ row * 2 * (m_tesselationLevel + 1) ]);
         }
     }
     else 
     {
-        glMultiDrawElementsEXT( GL_TRIANGLE_STRIP, m_trianglesPerRow,
-            GL_UNSIGNED_INT, (const void **)m_rowIndexPointers,
-            m_tesselationLevel); 
+        glMultiDrawElementsEXT(GL_TRIANGLE_STRIP, m_trianglesPerRow,
+                               GL_UNSIGNED_INT, (const void **)m_rowIndexPointers,
+                               m_tesselationLevel); 
     } 
 }
