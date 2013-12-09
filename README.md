@@ -14,7 +14,7 @@ If the file is a valid bsp/not corrupted it will load up the map in a 1024x768 w
 
 Note that you must have Quake III Arena textures and models unpacked in the root directory if you want to see proper texturing on screen, otherwise you'll just see a bunch of lightmapped, colored checker-board textures filling the screen which is less impressive.
 
-To move around use the WASD keys, RF keys lift you up/down, QE keys let you do the barrel roll.
+To move around use the WASD keys. RF keys lift you up/down and QE keys let you do the barrel roll.
 
 
 Dependencies
