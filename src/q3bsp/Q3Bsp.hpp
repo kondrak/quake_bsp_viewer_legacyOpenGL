@@ -69,8 +69,8 @@ struct Q3BspDirEntry
 
 struct Q3BspHeader
 {
-    char magic[4];
-    int version;
+    char          magic[4];
+    int           version;
     Q3BspDirEntry direntries[17];
 };
 
@@ -99,7 +99,7 @@ struct Q3BspPlaneLump
 
 struct Q3BspNodeLump
 {
-    int plane;
+    int   plane;
     vec2i children;
     vec3i mins; 
     vec3i maxs;
@@ -108,14 +108,14 @@ struct Q3BspNodeLump
 
 struct Q3BspLeafLump
 {
-    int cluster;
-    int area;
+    int   cluster;
+    int   area;
     vec3i mins;
     vec3i maxs;
-    int leafFace;  
-    int n_leafFaces;
-    int leafBrush;
-    int n_leafBrushes;
+    int   leafFace;  
+    int   n_leafFaces;
+    int   leafBrush;
+    int   n_leafBrushes;
 };
 
 
@@ -135,10 +135,10 @@ struct Q3BspModelLump
 {
     vec3f mins;
     vec3f maxs;
-    int face;
-    int n_faces;
-    int brush;
-    int n_brushes;
+    int   face;
+    int   n_faces;
+    int   brush;
+    int   n_brushes;
 };
 
 
@@ -172,9 +172,9 @@ struct Q3BspVertexLump
         result.position.z = position.z + rhs.position.z;
 
         result.texcoord[0].x = texcoord[0].x + rhs.texcoord[0].x;
-        result.texcoord[0].y = texcoord[0].y +rhs.texcoord[0].y;
-        result.texcoord[1].x = texcoord[1].x +rhs.texcoord[1].x;
-        result.texcoord[1].y = texcoord[1].y +rhs.texcoord[1].y;
+        result.texcoord[0].y = texcoord[0].y + rhs.texcoord[0].y;
+        result.texcoord[1].x = texcoord[1].x + rhs.texcoord[1].x;
+        result.texcoord[1].y = texcoord[1].y + rhs.texcoord[1].y;
 
         return result;
     }
@@ -182,13 +182,13 @@ struct Q3BspVertexLump
     Q3BspVertexLump operator*(const float rhs) const
     {
         Q3BspVertexLump result;
-        result.position.x =position.x*rhs;
-        result.position.y =position.y*rhs;
-        result.position.z =position.z*rhs;
-        result.texcoord[0].x = texcoord[0].x *rhs;
-        result.texcoord[0].y= texcoord[0].y *rhs;
-        result.texcoord[1].x=texcoord[1].x*rhs;
-        result.texcoord[1].y =texcoord[1].y*rhs;
+        result.position.x = position.x * rhs;
+        result.position.y = position.y * rhs;
+        result.position.z = position.z * rhs;
+        result.texcoord[0].x = texcoord[0].x * rhs;
+        result.texcoord[0].y = texcoord[0].y * rhs;
+        result.texcoord[1].x = texcoord[1].x * rhs;
+        result.texcoord[1].y = texcoord[1].y * rhs;
 
         return result;
     }
@@ -204,21 +204,21 @@ struct Q3BspMeshVertLump
 struct Q3BspEffectLump
 {
     char name[64];
-    int brush;
-    int unknown;
+    int  brush;
+    int  unknown;
 };
 
 
 struct Q3BspFaceLump
 {
-    int texture;
-    int effect;
-    int type;
-    int vertex;
-    int n_vertexes;
-    int meshvert;
-    int n_meshverts;
-    int lm_index;
+    int   texture;
+    int   effect;
+    int   type;
+    int   vertex;
+    int   n_vertexes;
+    int   meshvert;
+    int   n_meshverts;
+    int   lm_index;
     vec2i lm_start;
     vec2i lm_size;
     vec3f lm_origin;
