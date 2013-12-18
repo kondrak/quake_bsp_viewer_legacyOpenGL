@@ -22,11 +22,12 @@ void Q3StatsUI::OnRenderStart()
 
 void Q3StatsUI::Render()
 {
+    std::stringstream statsStream;  
+
     m_font.Begin();
     m_font.SetScale(0.01f);
 
-    std::stringstream statsStream;  
-
+    // no map loaded or no cmdline parameter specified - display error message
     if(!m_map)
     {
         m_font.SetColor(1.f, 0.f, 0.f);

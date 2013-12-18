@@ -103,8 +103,6 @@ namespace Math
     };
 
 
-/* ************** */
-
     // general purpose functions
     enum PointPlanePosition
     {

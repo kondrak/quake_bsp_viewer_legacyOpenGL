@@ -1,11 +1,11 @@
 #include "Frustum.hpp"
 
 
-void Frustum::Update()
+void Frustum::OnRender()
 {
     // do the math on OpenGL projection and modelview matrices
     GLfloat projection[16];
-    GLfloat modelview[16];
+    GLfloat  modelview[16];
 
     glGetFloatv(GL_PROJECTION_MATRIX, projection);
     glGetFloatv(GL_MODELVIEW_MATRIX,  modelview);

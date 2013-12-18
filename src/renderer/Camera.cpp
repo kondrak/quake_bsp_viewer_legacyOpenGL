@@ -37,10 +37,9 @@ void Camera::OnRender()
     // point we're looking at
     Math::Vector3f ViewPoint = m_position+m_viewVector;
 
-    gluLookAt(  m_position.m_x, m_position.m_y, m_position.m_z,
-                ViewPoint.m_x, ViewPoint.m_y, ViewPoint.m_z,
-                m_upVector.m_x, m_upVector.m_y, m_upVector.m_z);
-
+    gluLookAt( m_position.m_x, m_position.m_y, m_position.m_z,
+               ViewPoint.m_x, ViewPoint.m_y, ViewPoint.m_z,
+               m_upVector.m_x, m_upVector.m_y, m_upVector.m_z );
 }
 
 

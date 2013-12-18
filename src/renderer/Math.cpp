@@ -91,7 +91,6 @@ namespace Math
                            m_w*q2.m_w - m_x*q2.m_x - m_y*q2.m_y - m_z*q2.m_z );
     }
 
-
     Vector3f Quaternion::operator*(const Vector3f &vec) const
     {
         Vector3f vn(vec);
@@ -112,7 +111,6 @@ namespace Math
     /*
      * General purpose functions
      */
-
     float QuickInverseSqrt( float number )
     {
         long i;

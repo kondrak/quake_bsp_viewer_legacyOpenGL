@@ -37,9 +37,7 @@ int main(int argc, char **argv)
         Uint32 now = SDL_GetTicks();
 
         processEvents();
-
         g_application.OnUpdate(float(now - last) / 1000.f);
-
         g_application.OnRender();
 
         SDL_GL_SwapWindow( g_renderContext.window );
@@ -48,7 +46,6 @@ int main(int argc, char **argv)
     }
 
     g_application.OnTerminate();
-
     SDL_Quit();
 
     return 0;

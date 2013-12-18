@@ -89,7 +89,6 @@ void processEvents()
                 g_application.Terminate(); 
                 break;
             }
-
             g_application.OnKeyPress( SDLKeyToKeyCode( event.key.keysym.sym ) );
             break;
         case SDL_KEYUP:

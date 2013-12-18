@@ -57,7 +57,6 @@ void Application::OnStart(int argc, char **argv)
     if(argc > 1)
         g_q3map = loader.Load(argv[1]);
 
-    // no map loaded or no cmdline parameter specified - display error message
     if(g_q3map)
     {
         g_q3map->Init();
@@ -76,14 +75,13 @@ void Application::OnRender()
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
     // render the bsp
-    SetupPerspective();
-
-    g_cameraDirector.GetActiveCamera()->OnRender();
-
-    g_frustum.Update();
-
     if(g_q3map)
     {
+        SetupPerspective();
+
+        g_cameraDirector.GetActiveCamera()->OnRender();        
+        g_frustum.OnRender();
+
         g_q3map->OnRenderStart();
         g_q3map->Render();
         g_q3map->OnRenderFinish();
@@ -92,16 +90,15 @@ void Application::OnRender()
             return;
     }
 
-    // render map stats
-    SetupOrthogonal();
-  
+    // render map stats  
     if(g_q3stats)
     {
+        SetupOrthogonal();
+
         g_q3stats->OnRenderStart();
         g_q3stats->Render();
         g_q3stats->OnRenderFinish();
     }
-
 }
 
 
@@ -113,7 +110,6 @@ void Application::OnUpdate(float dt)
 
 void Application::OnTerminate()
 {
-    // clean up
     delete g_q3map;
     delete g_q3stats;
 }

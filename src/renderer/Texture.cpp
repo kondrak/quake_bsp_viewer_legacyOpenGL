@@ -33,7 +33,6 @@ GLuint Texture::Load()
     glTexImage2D(GL_TEXTURE_2D, 0, m_components, m_width, m_height, 0, m_components == 3 ? GL_RGB : GL_RGBA, GL_UNSIGNED_BYTE, m_textureData);
 
     stbi_image_free( m_textureData );
-
     m_textureData = NULL;
 
     return m_texId;

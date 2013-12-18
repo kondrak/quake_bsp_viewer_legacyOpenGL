@@ -31,7 +31,6 @@ Q3BspMap *Q3BspLoader::Load(const std::string &filename)
 
     // entities lump
     LoadEntitiesLump( q3map, bspFile );
-
     // generic lumps
     LoadLump( q3map, Textures,    q3map->textures,     bspFile );
     LoadLump( q3map, Planes,      q3map->planes,       bspFile );
@@ -48,7 +47,6 @@ Q3BspMap *Q3BspLoader::Load(const std::string &filename)
     LoadLump( q3map, Faces,       q3map->faces,        bspFile );
     LoadLump( q3map, Lightmaps,   q3map->lightMaps,    bspFile );
     LoadLump( q3map, LightVols,   q3map->lightVols,    bspFile );
-
     // vis data lump
     LoadVisDataLump( q3map, bspFile );
 
