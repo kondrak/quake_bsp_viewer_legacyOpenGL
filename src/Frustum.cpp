@@ -52,7 +52,6 @@ bool Frustum::BoxInFrustum(const Math::Vector3f *vertices)
     return true;
 }
 
-
 // extract a plane from a given matrix and row id
 void Frustum::ExtractPlane(Plane &plane, GLfloat *mat, int row)
 {
