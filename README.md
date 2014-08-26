@@ -3,6 +3,8 @@ Quake BSP map viewer
 
 This is a rudimentary map viewer for Quake, written as a fun-time project over a single weekend. For that reason it only handles the very basic polygon/curved patch rendering (ie. no support for game-specific shaders, entity rendering etc.). It does, however, implement PVS and frustum culling so you shouldn't run into any performance issues. At the moment the Quake III Arena map format is the only one you can view but I might extend it over time to support earlier bsp versions as well.
 
+![Screenshot](http://kondrak.info/images/qbsp/qbsp1.png?raw=true)
+![Screenshot](http://kondrak.info/images/qbsp/qbsp3.png?raw=true)
 
 Usage
 -----
