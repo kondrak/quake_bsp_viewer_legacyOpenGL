@@ -47,6 +47,7 @@ Todo
 ----
 Here's a list of ideas that could be fun to implement over time:
 
+- rewrite the thing so that it doesn't use OpenGL immediate mode for rendering
 - add support for older bsp formats (ie. Quake1, Quake2)
 - render map entities (weapons, armor, other pickups)
 - support loading data from pk3/pak files
